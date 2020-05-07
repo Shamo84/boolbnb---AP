@@ -22,7 +22,15 @@
 
 <div class="about__content">
     <div class="wrapper">
-        <p></p>
+        <a class="box" href="https://www.linkedin.com/in/andrea-pacifico/" target="_blank">
+          <div class="left">
+              <h3>Andrea Pacifico</h3>
+              <p>Jr. Full Stack Web Developer</p>
+          </div>
+          <div class="right">
+              <i class="lni lni-linkedin-original"></i>
+          </div>
+        </a>
         <div class="box">
             <div class="left">
                 <h3>Luisa Logozzo</h3>
@@ -67,16 +75,7 @@
             </div>
         </div>
 
-        <div class="box">
-            <div class="left">
-                <h3>Andrea Pacifico</h3>
-                <p>Jr. Full Stack Web Developer</p>
-            </div>
-            <div class="right">
-                <a href="https://www.linkedin.com/in/andrea-pacifico/" target="_blank"><i class="lni lni-linkedin-original"></i></a>
 
-            </div>
-        </div>
 
 
 

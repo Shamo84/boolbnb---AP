@@ -23,7 +23,7 @@
         display: flex;
         flex-wrap: wrap;
         flex-basis: auto;
-        justify-content: flex-start;
+        justify-content: center;
 
         .home-apartment__heading {
             padding-left: 10px;
@@ -37,9 +37,6 @@
         }
 
         .home-apartment__container {
-            width: calc(100% / 4);
-            padding: 10px;
-
             .home-apartment__box {
                 background-color: #ffffff;
                 border: 1px solid #ebebeb;
@@ -305,34 +302,4 @@ div.swiper-button-prev {
 span.swiper-pagination-bullet {
     background-color: $coloreOver;
     //----------------
-}
-@media screen and (min-width: 1024px) and (max-width: 1400px) {
-    .home-apartment {
-        .home-apartment__wrapper {
-            .home-apartment__container {
-                width: calc(100% / 3);
-                padding: 14px;
-            }
-        }
-    }
-}
-@media screen and (min-width: 600px) and (max-width: 1024px) {
-    .home-apartment {
-        .home-apartment__wrapper {
-            .home-apartment__container {
-                width: calc(100% / 2);
-                padding: 14px;
-            }
-        }
-    }
-}
-@media screen and (max-width: 600px) {
-    .home-apartment {
-        .home-apartment__wrapper {
-            .home-apartment__container {
-                width: calc(100%);
-                padding: 14px;
-            }
-        }
-    }
 }

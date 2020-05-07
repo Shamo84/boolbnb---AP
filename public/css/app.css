@@ -15387,11 +15387,6 @@ body {
   box-shadow: 0 0 30px 0 rgba(19, 19, 28, 0.12);
 }
 
-.home-apartment .home-apartment__wrapper .home-apartment__container .home-apartment__box:hover .thumb_container {
-  transform: scale(1.05);
-  transition: all 0.5s ease;
-}
-
 .home-apartment .home-apartment__wrapper .home-apartment__container .thumb {
   background-color: #000000;
   border-radius: 8px;
@@ -15402,24 +15397,6 @@ body {
   overflow: hidden;
   margin: 10px 10px 0;
   position: relative;
-}
-
-.home-apartment .home-apartment__wrapper .home-apartment__container .thumb_container {
-  width: 100%;
-  height: 240px;
-  position: relative;
-  transition: all 0.5s ease;
-}
-
-.home-apartment .home-apartment__wrapper .home-apartment__container .thumb_container .img-whp {
-  opacity: 0.6;
-  width: 170%;
-  height: auto;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  transition: all 0.5s ease;
 }
 
 .home-apartment .home-apartment__wrapper .home-apartment__container .thmb_cntnt {
@@ -16410,11 +16387,6 @@ span.swiper-pagination-bullet {
   box-shadow: 0 0 30px 0 rgba(19, 19, 28, 0.12);
 }
 
-.ap-create-show__content .wrapper .upr-show-sticky .home-apartment__container .home-apartment__box:hover .thumb_container {
-  transform: scale(1.05);
-  transition: all 0.5s ease;
-}
-
 .ap-create-show__content .wrapper .upr-show-sticky .home-apartment__container .thumb {
   background-color: #898989;
   border-radius: 8px;
@@ -16425,24 +16397,6 @@ span.swiper-pagination-bullet {
   overflow: hidden;
   margin: 10px 10px 0;
   position: relative;
-}
-
-.ap-create-show__content .wrapper .upr-show-sticky .home-apartment__container .thumb_container {
-  width: 100%;
-  height: 240px;
-  position: relative;
-  transition: all 0.5s ease;
-}
-
-.ap-create-show__content .wrapper .upr-show-sticky .home-apartment__container .thumb_container .img-whp {
-  opacity: 0.6;
-  width: 170%;
-  height: auto;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  transition: all 0.5s ease;
 }
 
 .ap-create-show__content .wrapper .upr-show-sticky .home-apartment__container .thmb_cntnt {
@@ -17209,8 +17163,12 @@ span.swiper-pagination-bullet {
 }
 
 .home-apartment__container .home-apartment__box:hover .thumb_container {
-  transform: scale(1.05);
+  transform: scale(1.1);
   transition: all 0.5s ease;
+}
+
+.home-apartment__container .home-apartment__box:hover .thumb_container .img-whp {
+  opacity: 1;
 }
 
 .home-apartment__container .thumb {
@@ -17233,9 +17191,11 @@ span.swiper-pagination-bullet {
 }
 
 .home-apartment__container .thumb_container .img-whp {
-  opacity: 0.6;
-  width: 170%;
-  height: auto;
+  opacity: 0.9;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -17453,11 +17413,6 @@ span.swiper-pagination-bullet {
     box-shadow: 0 0 30px 0 rgba(19, 19, 28, 0.12);
   }
 
-  .home-apartment__container .home-apartment__box:hover .thumb_container {
-    transform: scale(1.05);
-    transition: all 0.5s ease;
-  }
-
   .home-apartment__container .thumb {
     background-color: #000000;
     border-radius: 8px;
@@ -17468,24 +17423,6 @@ span.swiper-pagination-bullet {
     overflow: hidden;
     margin: 10px 10px 0;
     position: relative;
-  }
-
-  .home-apartment__container .thumb_container {
-    width: 100%;
-    height: 240px;
-    position: relative;
-    transition: all 0.5s ease;
-  }
-
-  .home-apartment__container .thumb_container .img-whp {
-    opacity: 0.6;
-    width: 170%;
-    height: auto;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    transition: all 0.5s ease;
   }
 
   .home-apartment__container .thmb_cntnt {
@@ -17883,11 +17820,6 @@ span.swiper-pagination-bullet {
   box-shadow: 0 0 30px 0 rgba(19, 19, 28, 0.12);
 }
 
-.payment__content .wrapper .upr-show-sticky .home-apartment__container .home-apartment__box:hover .thumb_container {
-  transform: scale(1.05);
-  transition: all 0.5s ease;
-}
-
 .payment__content .wrapper .upr-show-sticky .home-apartment__container .thumb {
   background-color: #898989;
   border-radius: 8px;
@@ -17898,24 +17830,6 @@ span.swiper-pagination-bullet {
   overflow: hidden;
   margin: 10px 10px 0;
   position: relative;
-}
-
-.payment__content .wrapper .upr-show-sticky .home-apartment__container .thumb_container {
-  width: 100%;
-  height: 240px;
-  position: relative;
-  transition: all 0.5s ease;
-}
-
-.payment__content .wrapper .upr-show-sticky .home-apartment__container .thumb_container .img-whp {
-  opacity: 0.6;
-  width: 170%;
-  height: auto;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  transition: all 0.5s ease;
 }
 
 .payment__content .wrapper .upr-show-sticky .home-apartment__container .thmb_cntnt {

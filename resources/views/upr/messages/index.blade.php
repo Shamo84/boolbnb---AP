@@ -26,7 +26,7 @@
               </form>
           </div>
           <div class="title">
-              <h4 >Appartamento: {{$message->apartment->title}}</h4>
+              <h4 class="alert alert-success">Appartamento: {{$message->apartment->title}}</h4>
 
           </div>
           <div class="msn-content">

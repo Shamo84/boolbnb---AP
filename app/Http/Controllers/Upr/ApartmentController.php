@@ -5,12 +5,14 @@ namespace App\Http\Controllers\upr;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use App\Apartment;
+use App\ApartmentPackage;
 use App\Service;
 use App\Image;
 use App\View;
 use App\Http\Traits\GetViews;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Carbon\Carbon;
 
 class ApartmentController extends Controller
 {
@@ -113,11 +115,18 @@ class ApartmentController extends Controller
 		if ($apartment->user->id != $idUser) {
 			return redirect()->route('apartment.show', $apartment);
 		}
-
+		$activePackageDate = $activePackageTime = 0;
+		$newestPackage = ApartmentPackage::where("apartment_id", $apartment->id)->orderBy('id', 'DESC')->first();
+		if ($newestPackage && Carbon::createFromDate($newestPackage->end)->gt(Carbon::now())) {
+			$activePackageDate = Carbon::createFromDate($newestPackage->end)->format("d/m/Y");
+			$activePackageTime = Carbon::createFromDate($newestPackage->end)->toTimeString();
+		}
 
 		$data = [
 			'apartment' => $apartment,
-			'views' => $this->GetViews($apartment->id)
+			'views' => $this->GetViews($apartment->id),
+			'activePackageDate' => $activePackageDate,
+			'activePackageTime' => $activePackageTime,
 		];
 		return view('upr.apartments.show', $data);
 	}

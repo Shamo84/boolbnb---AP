@@ -22,8 +22,6 @@
         <div class="menu-right">
 					<a class="ap__btn" href="{{route("upr.apartment.gallery", $apartment)}}">Galleria immagini</a>
 					<a class="ap__btn" href="{{route("upr.apartment.edit", $apartment)}}">Modifica</a>
-					{{-- <a class="ap__btn" href="{{route("upr.apartment.statistics", $apartment)}}">Statistiche</a>
-          <a class="ap__btn" href="{{route("upr.payment.process", $apartment)}}">Sponsorizza</a> --}}
 					<form class="d-inline ap__btn" action="{{route("upr.apartment.statistics", $apartment)}}" method="post">
 						@csrf
 						@method('POST')
@@ -72,10 +70,14 @@
 {{-- ---- --}}
 
 
+
 <div class="ap-show__content">
 
     <div class="wrapper">
         <div class="left">
+					@if ($activePackageDate)
+						<h2 class="alert alert-success">Appartamento sponsorizzato fino al: {{$activePackageDate}} alle {{$activePackageTime}}</h2>
+					@endif
             <div class="box box-flex">
 
                 <div class="box-spec">

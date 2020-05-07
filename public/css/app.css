@@ -17163,7 +17163,7 @@ span.swiper-pagination-bullet {
 }
 
 .home-apartment__container .home-apartment__box:hover .thumb_container {
-  transform: scale(1.1);
+  transform: scale(1.07);
   transition: all 0.5s ease;
 }
 

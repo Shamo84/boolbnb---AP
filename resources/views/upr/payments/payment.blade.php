@@ -51,36 +51,11 @@
 			<div class="left">
 
 
-@if (!$apartment->packages->isEmpty())
-	<h4>Sponsorizzazioni attive</h4>
-	<div class="table-package">
-
-		<table class="customTable">
-			<thead >
-				<tr >
-					<th >Pacchetto</th>
-					<th >Prezzo</th>
-					<th >Durata</th>
-					<th >Inizio promo</th>
-					<th >Fine promo</th>
-				</tr>
-			</thead>
-			@foreach ($packageActives as  $packageActive)
-
-			<tbody>
-				<tr >
-					<td>{{$packageActive->name}}</td>
-					<td>{{$packageActive->price}} Euro</td>
-					<td>{{$packageActive->duration}} ore</td>
-					<td>{{$packageActive->start}}</td>
-					<td>{{$packageActive->end}}</td>
-				</tr>
-			</tbody>
-				@endforeach
-		</table>
-	</div>
-@endif
-
+				@if ($activePackageDate)
+					<h2 class="alert alert-success">Appartamento già sponsorizzato fino al: {{$activePackageDate}} alle {{$activePackageTime}}</h2>
+				@else
+					<h2 class="alert alert-danger">Appartamento attualmente non sponsorizzato</h2>
+				@endif
 
 				<form method="post" id="payment-form" action="{{route('upr.payment.confirmation', $apartment)}}">
 					@method('POST')

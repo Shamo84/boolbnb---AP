@@ -41,18 +41,20 @@ class PaymentController extends Controller
 
         $gateway = new Braintree\Gateway($this->braintreeConfig);
 
-        $packageActive = DB::table('packages')
-            ->join('apartment_package', 'packages.id', '=', 'apartment_package.package_id')
-            ->where('apartment_id', $apartment->id)
-            ->get();
-
+        $activePackageDate = $activePackageTime = 0;
+        $newestPackage = ApartmentPackage::where("apartment_id", $apartment->id)->orderBy('id', 'DESC')->first();
+        if ($newestPackage && Carbon::createFromDate($newestPackage->end)->gt(Carbon::now())) {
+          $activePackageDate = Carbon::createFromDate($newestPackage->end)->format("d/m/Y");
+          $activePackageTime = Carbon::createFromDate($newestPackage->end)->toTimeString();
+        }
 
 
         return view('upr.payments.payment', [
             'token' => $gateway->ClientToken()->generate(),
             'packages' => Package::all(),
-            "packageActives" => $packageActive,
             'apartment' => $apartment,
+            'activePackageDate' => $activePackageDate,
+            'activePackageTime' => $activePackageTime
         ]);
     }
 
@@ -103,10 +105,20 @@ class PaymentController extends Controller
             $subscription->end = Carbon::parse($subscription->start)->addHours($hours);
             $subscription->transaction_id = $transaction->id;
             $subscription->save();
+            
+            $activePackageDate = $activePackageTime = 0;
+        		$newestPackage = ApartmentPackage::where("apartment_id", $apartment->id)->orderBy('id', 'DESC')->first();
+        		if ($newestPackage && Carbon::createFromDate($newestPackage->end)->gt(Carbon::now())) {
+        			$activePackageDate = Carbon::createFromDate($newestPackage->end)->format("d/m/Y");
+        			$activePackageTime = Carbon::createFromDate($newestPackage->end)->toTimeString();
+        		}
+
             $data = [
                 'message' => 'La transazione con ID: ' . $transaction->id . ' è avvenuta con successo',
                 'apartment' => $apartment,
-                'views' => $this->GetViews($apartment->id)
+                'activePackageDate' => $activePackageDate,
+                'activePackageTime' => $activePackageTime,
+                'views' => $this->GetViews($apartment->id),
             ];
             return view('upr.apartments.show', $data);
         } else {

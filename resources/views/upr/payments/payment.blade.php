@@ -52,7 +52,7 @@
 
 
 				@if ($activePackageDate)
-					<h2 class="alert alert-success">Appartamento già sponsorizzato fino al: {{$activePackageDate}} alle {{$activePackageTime}}</h2>
+					<h2 class="alert alert-success">Appartamento già sponsorizzato fino alle {{$activePackageTime}} del {{$activePackageDate}}</h2>
 				@else
 					<h2 class="alert alert-danger">Appartamento attualmente non sponsorizzato</h2>
 				@endif

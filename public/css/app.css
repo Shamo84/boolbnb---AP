@@ -14557,6 +14557,15 @@ body {
   min-width: 450px;
 }
 
+a {
+  color: #5a5a5b;
+}
+
+a:hover {
+  color: #5a5a5b;
+  text-decoration: none;
+}
+
 .daterangepicker .ranges li.active {
   background-color: #f7f7f7;
   color: #d34262;
@@ -15352,7 +15361,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   flex-basis: auto;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .home-apartment .home-apartment__wrapper .home-apartment__heading {
@@ -17568,6 +17577,10 @@ span.swiper-pagination-bullet {
 
   .home-apartment__container {
     width: 100%;
+  }
+
+  .home-apartment__wrapper {
+    justify-content: center !important;
   }
 }
 

@@ -76,7 +76,7 @@
     <div class="wrapper">
         <div class="left">
 					@if ($activePackageDate)
-						<h2 class="alert alert-success">Appartamento sponsorizzato fino al: {{$activePackageDate}} alle {{$activePackageTime}}</h2>
+						<h2 class="alert alert-success">Appartamento sponsorizzato fino alle {{$activePackageTime}} del {{$activePackageDate}}</h2>
 					@endif
             <div class="box box-flex">
 

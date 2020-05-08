@@ -76,30 +76,21 @@
             {{-- @if (!$apartments->packages->isEmpty()) --}}
 
               <div class="table-package">
-
                 <table class="customTable">
                   <thead >
-                    <tr >
-                      <th >Alloggio</th>
-                      <th >Pacchetto</th>
-                      <th >Durata</th>
-                      <th >Price</th>
-
+                    <tr>
+                      <th>Alloggio</th>
+                      <th>Fine Promozione</th>
                     </tr>
                   </thead>
-
-                  @foreach ($packageActives as  $packageActive)
-
-                  <tbody>
-                    <tr >
-                      <td>{{$packageActive->title}}</td>
-                      <td>{{$packageActive->name}}</td>
-                      <td>{{$packageActive->duration}} ore</td>
-                      <td>{{$packageActive->price}} Euro</td>
-
-                    </tr>
-                  </tbody>
-                    @endforeach
+                  @foreach ($activePackages as $activePackage)
+                    <tbody>
+                      <tr >
+                        <td>{{$activePackage["title"]}}</td>
+                        <td>{{$activePackage["end"]}}</td>
+                      </tr>
+                    </tbody>
+                  @endforeach
                 </table>
               </div>
             {{-- @endif --}}

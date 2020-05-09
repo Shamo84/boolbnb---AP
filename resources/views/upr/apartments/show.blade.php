@@ -152,17 +152,17 @@
         </div>
 
 
-        <div class="right ">
-          <div class="upr-show-sticky">
+        <div class="right">
+					<a class="upr-show-sticky" href="{{route("upr.apartment.statistics", $apartment)}}">
             {{-- visualizzazioni --}}
-                <div class="statistic-box">
-									<i class="lni lni-stats-up"></i>
-                  <h3>Visualizzazioni Totali</h3>
-                  <div>
-                    <h3 class="count">{{$views}}</h3>
-                  </div>
-                </div>
-          </div>
+            <div class="statistic-box">
+							<i class="lni lni-stats-up"></i>
+              <h3>Visualizzazioni Totali</h3>
+              <div>
+                <h3 class="count">{{$views}}</h3>
+              </div>
+            </div>
+					</a>
         </div>
 
 

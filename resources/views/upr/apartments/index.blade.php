@@ -19,6 +19,7 @@
         @foreach ($apartments as $apartment)
         <div class="home-apartment__container">
             <div class="home-apartment__box">
+              <a href="{{route("upr.apartment.show", $apartment)}}">
 
                 <div class="thumb">
                     <div class="thumb_container">
@@ -42,7 +43,7 @@
                                 Azioni
                             </button>
                             <div class="dropdown-menu dropdown-menu-right">
-                                <a class="dropdown-item" href="{{route("upr.apartment.show", $apartment)}}">Visualizza</a>
+                              <object><a class="dropdown-item" href="{{route("upr.apartment.show", $apartment)}}">Visualizza</a></object>  
                                 <form action="{{route("upr.apartment.statistics", $apartment)}}" method="post">
                     							@csrf
                     							@method('POST')
@@ -68,9 +69,9 @@
                 <div class="details">
                     <div class="tc_content">
                         <div class="tc_content__height">
-                            <a href="{{route("upr.apartment.show", $apartment)}}">
+
                                 <h4>{{$apartment->title}}</h4>
-                            </a>
+
                         </div>
 
                         <p><span></span> {{$apartment->address}}</p>
@@ -81,7 +82,7 @@
                         </ul>
                     </div>
                 </div>
-
+              </a>
             </div>
         </div>
         @endforeach

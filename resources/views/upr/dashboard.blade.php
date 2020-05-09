@@ -36,19 +36,17 @@
             </div>
         </div>
         <div class="right">
-
           <div class="stat-wrapper">
-            <div class="stat-box">
-                <div class="left">
-                    <h3>{{count($apartments)}}</h3>
-                    <p>Annunci</p>
-                </div>
-                <div class="right">
-                    <i class="lni lni-home"></i>
-
-                </div>
-            </div>
-            <div class="stat-box">
+            <a class="stat-box" href="{{route("upr.apartment.index")}}">
+              <div class="left">
+                <h3>{{count($apartments)}}</h3>
+                <p>Annunci</p>
+              </div>
+              <div class="right">
+                <i class="lni lni-home"></i>
+              </div>
+            </a>
+            <a class="stat-box" href="{{route("upr.message.index")}}">
                 <div class="left">
                     <h3>{{count($messages)}}</h3>
                     <p>Messaggi</p>
@@ -57,7 +55,7 @@
                     <i class="lni lni-envelope"></i>
 
                 </div>
-            </div>
+            </a>
             <div class="stat-box">
                 <div class="left">
                     <h3>{{count($totalViews)}}</h3>

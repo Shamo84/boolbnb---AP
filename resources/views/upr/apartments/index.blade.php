@@ -38,30 +38,33 @@
                       @endif
                       @endforeach
                         <div class="action">
-
-                            <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Azioni
-                            </button>
-                            <div class="dropdown-menu dropdown-menu-right">
-                              <object><a class="dropdown-item" href="{{route("upr.apartment.show", $apartment)}}">Visualizza</a></object>  
-                                <form action="{{route("upr.apartment.statistics", $apartment)}}" method="post">
-                    							@csrf
-                    							@method('POST')
-                    							<button class="dropdown-item" type="submit">Statistiche</button>
-                    						</form>
-                                <form action="{{route("upr.payment.process", $apartment)}}" method="post">
-                    							@csrf
-                    							@method('POST')
-                    							<button class="dropdown-item" type="submit">Sponsorizza</button>
-                    						</form>
-                                <div class="dropdown-divider"></div>
-                                <form action="{{route("upr.apartment.destroy", $apartment)}}" method="post">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button class="dropdown-item" type="submit">Elimina</button>
-                                </form>
-                            </div>
-
+                          <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Azioni
+                          </button>
+                          <div class="dropdown-menu dropdown-menu-right">
+                            {{-- <object><a class="dropdown-item" href="{{route("upr.apartment.show", $apartment)}}">Visualizza</a></object> --}}
+                              <form action="{{route("upr.apartment.show", $apartment)}}" method="post">
+                  							@csrf
+                  							@method('GET')
+                  							<button class="dropdown-item" type="submit">Visualizza</button>
+                  						</form>
+                              <form action="{{route("upr.apartment.statistics", $apartment)}}" method="post">
+                  							@csrf
+                  							@method('POST')
+                  							<button class="dropdown-item" type="submit">Statistiche</button>
+                  						</form>
+                              <form action="{{route("upr.payment.process", $apartment)}}" method="post">
+                  							@csrf
+                  							@method('POST')
+                  							<button class="dropdown-item" type="submit">Sponsorizza</button>
+                  						</form>
+                              <div class="dropdown-divider"></div>
+                              <form action="{{route("upr.apartment.destroy", $apartment)}}" method="post">
+                                  @csrf
+                                  @method('DELETE')
+                                  <button class="dropdown-item" type="submit">Elimina</button>
+                              </form>
+                          </div>
                         </div>
                         <p class="fp_price">{{$apartment->price}}<small> euro</small></p>
                     </div>

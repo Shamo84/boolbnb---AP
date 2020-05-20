@@ -30,7 +30,7 @@
              @csrf
          </form>
          <div class="">
-             <a class="gallery-btn" href="{{route("upr.apartments.index")}}">Salva appartamento</a>
+             <a class="gallery-btn" href="{{route("upr.apartment.index")}}">Vai all'appartamento</a>
          </div>
 
 

@@ -192,6 +192,7 @@
 								</div>
 						</div>
 						<button class="form-create__btn" type="submit">Salva</button>
+						<button class="form-create__btn" type="submit" name="otherImgs" value="true">Aggiungi immagini</button>
 					</form>
 						</div>
 

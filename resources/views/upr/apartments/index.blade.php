@@ -44,7 +44,7 @@
                           <div class="dropdown-menu dropdown-menu-right">
                             {{-- <object><a class="dropdown-item" href="{{route("upr.apartment.show", $apartment)}}">Visualizza</a></object> --}}
                               <form action="{{route("upr.apartment.show", $apartment)}}" method="post">
-                  							@csrf
+                  						
                   							@method('GET')
                   							<button class="dropdown-item" type="submit">Visualizza</button>
                   						</form>

@@ -9,28 +9,25 @@ use Carbon\Carbon;
 use App\Service;
 use App\Image;
 use App\Http\Traits\CalcDistance;
+use App\Http\Traits\DivideApartments;
+
 
 
 class SearchController extends Controller
 	{
 		use CalcDistance;
+		use DivideApartments;
 
 
 		public function index(Request $request)
 		{
-			if (!$request->has('address') || !$request->has('latitude') || !$request->has('longitude')) {
+			if (!$request->has('address') || empty($request->address) || !$request->has('latitude') || empty($request->latitude) || !$request->has('longitude') || empty($request->longitude)) {
 				return redirect()->route('home');
 			}
 			$data = $request->all();
-			$sponsoredApartments = [];
-			$allApartmentPackage = ApartmentPackage::all();
-			foreach ($allApartmentPackage as $apartmentpkg) {
-				if (Carbon::parse($apartmentpkg->start)->lt(Carbon::now()) && Carbon::parse($apartmentpkg->end)->gt(Carbon::now())) {
-					$sponsoredApartments[] = $apartmentpkg->apartment_id;
-				}
-			}
-			$advApt = Apartment::where('active', '1')->whereIn('id', $sponsoredApartments)->latest()->get();
-			$noAdvApt = Apartment::where('active', '1')->whereNotIn('id', $sponsoredApartments)->latest()->get();
+
+			$advApt = $this->DivideApartments()[0];
+			$noAdvApt = $this->DivideApartments()[1];
 
 			$apartmentsInRadius = $this->DistanceFilter($noAdvApt, $data["latitude"], $data["longitude"]);
 			$advApt = $this->DistanceFilter($advApt, $data["latitude"], $data["longitude"]);

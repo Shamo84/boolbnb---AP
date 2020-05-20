@@ -8,10 +8,12 @@ use App\ApartmentPackage;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use App\View;
+use App\Http\Traits\DivideApartments;
 
 
 class ApartmentController extends Controller
 {
+	use DivideApartments;
 	/**
 	 * Display a listing of the resource.
 	 *
@@ -19,15 +21,10 @@ class ApartmentController extends Controller
 	 */
 	public function index()
 	{
-		$sponsoredApartments = [];
-		$allApartmentPackage = ApartmentPackage::all();
-		foreach ($allApartmentPackage as $apartmentpkg) {
-			if (Carbon::parse($apartmentpkg->start)->lt(Carbon::now()) && Carbon::parse($apartmentpkg->end)->gt(Carbon::now())) {
-				$sponsoredApartments[] = $apartmentpkg->apartment_id;
-			}
-		}
-		$advApt = Apartment::where('active', '1')->whereIn('id', $sponsoredApartments)->latest()->get();
-		$noAdvApt = Apartment::where('active', '1')->whereNotIn('id', $sponsoredApartments)->latest()->get();
+
+		$advApt = $this->DivideApartments()[0];
+		$noAdvApt = $this->DivideApartments()[1];
+
 		$data = [
 			'advApt' => $advApt,
 			'noAdvApt' => $noAdvApt

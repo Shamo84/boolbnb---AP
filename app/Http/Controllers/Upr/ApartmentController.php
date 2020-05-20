@@ -48,7 +48,6 @@ class ApartmentController extends Controller
 	public function store(Request $request)
 	{
 		$data = $request->all();
-
 		if (empty($data["cover_img"])) {
       $path = 'storage/images/asset/nophoto.png';
     } else {
@@ -96,8 +95,10 @@ class ApartmentController extends Controller
 		if (!empty($data['services'])) {
 			$newApartment->services()->attach($data['services']);
 		}
-
+		if (isset($data["otherImgs"])) {
 			return view('upr.image-upload', compact("apartmentId"));
+		}
+		return redirect()->route('apartment.show', $newApartment);
 	}
 
 	/**

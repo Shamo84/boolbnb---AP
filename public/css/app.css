@@ -14790,6 +14790,7 @@ a:hover {
   padding: 10px 12px;
   transition: 0.6s;
   font-weight: 600;
+  display: inline-block;
 }
 
 .top-header .top-header__wrapper .top-header__right ul li .btn__menu i {
@@ -14978,6 +14979,7 @@ a:hover {
     padding: 8px 10px;
     transition: 0.6s;
     font-weight: 600;
+    display: inline-block;
   }
 
   .top-header .top-header__wrapper .top-header__right .login-menu__drop-down .btn__menu i {
@@ -15679,6 +15681,7 @@ span.swiper-pagination-bullet {
   padding: 10px 12px;
   transition: 0.6s;
   font-weight: 600;
+  display: inline-block;
 }
 
 .ap-show .ap-show__wrapper .menu-left .btn__menu i {
@@ -15700,13 +15703,14 @@ span.swiper-pagination-bullet {
   background-color: #d34262;
   color: #ffffff;
   border-radius: 25px;
-  padding: 10px 15px;
+  padding: 22px 15px;
   transition: 0.6s;
   font-weight: 600;
   width: 160px;
   position: relative;
   height: 40px;
   text-decoration: none;
+  line-height: 3px;
 }
 
 .ap-show .ap-show__wrapper .menu-right .ap__btn .icon {
@@ -17821,6 +17825,13 @@ span.swiper-pagination-bullet {
   top: 110px;
 }
 
+.payment__content .wrapper .upr-show-sticky .home-apartment__container {
+  min-width: 417px;
+  max-width: 600px;
+  width: calc(100%);
+  padding: 10px;
+}
+
 .payment__content .wrapper .upr-show-sticky .home-apartment__container .home-apartment__box {
   background-color: #ffffff;
   border: 1px solid #ebebeb;
@@ -17844,9 +17855,29 @@ span.swiper-pagination-bullet {
   display: -ms-flex;
   display: -o-flex;
   display: flex;
-  overflow: visible;
+  overflow: hidden;
   margin: 10px 10px 0;
   position: relative;
+}
+
+.payment__content .wrapper .upr-show-sticky .home-apartment__container .thumb .thumb_container {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+.payment__content .wrapper .upr-show-sticky .home-apartment__container .thumb .thumb_container .img-whp {
+  opacity: 0.9;
+  width: 101%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s ease;
 }
 
 .payment__content .wrapper .upr-show-sticky .home-apartment__container .thmb_cntnt {

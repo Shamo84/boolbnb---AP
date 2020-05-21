@@ -20,14 +20,25 @@
             <a class="btn__menu" href="{{route("upr.apartment.index")}}"><i class="lni lni-chevron-left"></i>Indietro</a>
         </div>
         <div class="menu-right">
-					<a class="ap__btn" href="{{route("upr.apartment.gallery", $apartment)}}">Galleria immagini</a>
-					<a class="ap__btn" href="{{route("upr.apartment.edit", $apartment)}}">Modifica</a>
-					<form class="d-inline ap__btn" action="{{route("upr.apartment.statistics", $apartment)}}" method="post">
+					<form class="d-inline" action='{{route("upr.apartment.gallery", $apartment)}}' method="post">
+						@csrf
+						@method('GET')
+						<input class="ap__btn" type="submit" name="" value="Galleria immagini">
+
+
+					</form>
+					<form class="d-inline" action='{{route("upr.apartment.edit", $apartment)}}' method="post">
+						@csrf
+						@method('GET')
+						<input class="ap__btn" type="submit" name="" value="Modifica">
+
+					</form>
+					<form class="d-inline" action="{{route("upr.apartment.statistics", $apartment)}}" method="post">
 						@csrf
 						@method('POST')
 						<button class="ap__btn" type="submit">Statistiche</button>
 					</form>
-					<form class="d-inline ap__btn" action="{{route("upr.payment.process", $apartment)}}" method="post">
+					<form class="d-inline" action="{{route("upr.payment.process", $apartment)}}" method="post">
 						@csrf
 						@method('POST')
 						<button class="ap__btn" type="submit">Sponsorizza</button>

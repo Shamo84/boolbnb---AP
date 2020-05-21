@@ -92,7 +92,7 @@
 
 {{-- stampa appartamenti --}}
 
-<div id="apartments" class="home-apartment__container">
+<div id="apartments" class="search-apartment__container">
 
 	@foreach ($sponsoredApartments as $apartment)
 		<div class="apartment home-apartment__box" data-id="{{$apartment->id}}">

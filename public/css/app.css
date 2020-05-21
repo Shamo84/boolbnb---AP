@@ -15375,6 +15375,13 @@ a:hover {
   color: #5a5a5b;
 }
 
+.home-apartment .home-apartment__wrapper .home-apartment__container {
+  width: calc(100%/3);
+  padding: 10px;
+  min-width: 417px;
+  max-width: 600px;
+}
+
 .home-apartment .home-apartment__wrapper .home-apartment__container .home-apartment__box {
   background-color: #ffffff;
   border: 1px solid #ebebeb;
@@ -15391,6 +15398,34 @@ a:hover {
   box-shadow: 0 0 30px 0 rgba(19, 19, 28, 0.12);
 }
 
+.home-apartment .home-apartment__wrapper .home-apartment__container .home-apartment__box:hover .img-whp {
+  transition: all 0.5s ease;
+  width: 108%;
+  height: auto;
+  opacity: 1;
+}
+
+.home-apartment .home-apartment__wrapper .home-apartment__container .thumb_container {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+
+.home-apartment .home-apartment__wrapper .home-apartment__container .thumb_container .img-whp {
+  opacity: 0.9;
+  width: 101%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s ease;
+}
+
 .home-apartment .home-apartment__wrapper .home-apartment__container .thumb {
   background-color: #000000;
   border-radius: 8px;
@@ -15398,7 +15433,7 @@ a:hover {
   display: -ms-flex;
   display: -o-flex;
   display: flex;
-  overflow: hidden;
+  overflow: visible;
   margin: 10px 10px 0;
   position: relative;
 }
@@ -15474,26 +15509,25 @@ a:hover {
   position: relative;
 }
 
-.home-apartment .home-apartment__wrapper .home-apartment__container .details .tc_content {
-  padding: 20px;
+.home-apartment .home-apartment__wrapper .home-apartment__container .details .tc_content .tc_content__height {
+  height: 50px;
 }
 
-.home-apartment .home-apartment__wrapper .home-apartment__container .details .tc_content .tc_content__height {
-  height: 70px;
+.home-apartment .home-apartment__wrapper .home-apartment__container .details .tc_content .tc_content__height h4 {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #484848;
+  font-weight: bold;
+  line-height: 1.2;
+  padding-left: 20px;
 }
 
 .home-apartment .home-apartment__wrapper .home-apartment__container .details .tc_content .tc_content__height a {
   text-decoration: none;
 }
 
-.home-apartment .home-apartment__wrapper .home-apartment__container .details .tc_content .tc_content__height h4 {
-  font-size: 18px;
-  color: #484848;
-  font-weight: bold;
-  line-height: 1.2;
-}
-
-.home-apartment .home-apartment__wrapper .home-apartment__container .details .tc_content .tc_content__height p {
+.home-apartment .home-apartment__wrapper .home-apartment__container .details .tc_content p {
+  padding-left: 20px;
   font-size: 14px;
   color: #484848;
   line-height: 1.2;
@@ -15502,6 +15536,7 @@ a:hover {
 .home-apartment .home-apartment__wrapper .home-apartment__container .details .prop_details {
   margin-bottom: 0;
   display: flex;
+  padding-left: 20px;
 }
 
 .home-apartment .home-apartment__wrapper .home-apartment__container .details .prop_details li {
@@ -16372,7 +16407,7 @@ span.swiper-pagination-bullet {
   display: -ms-flex;
   display: -o-flex;
   display: flex;
-  overflow: hidden;
+  overflow: visible;
   margin: 10px 10px 0;
   position: relative;
 }
@@ -17033,6 +17068,7 @@ span.swiper-pagination-bullet {
 .search-container .left {
   display: flex;
   flex-direction: column;
+  align-items: center;
   flex-basis: 40%;
   padding: 20px;
   overflow-y: auto;
@@ -17119,14 +17155,14 @@ span.swiper-pagination-bullet {
   height: 100%;
 }
 
-.home-apartment__container {
-  width: calc(100%/3);
+.search-apartment__container {
+  width: 100%;
   padding: 10px;
   min-width: 417px;
   max-width: 600px;
 }
 
-.home-apartment__container .home-apartment__box {
+.search-apartment__container .home-apartment__box {
   background-color: #ffffff;
   border: 1px solid #ebebeb;
   border-radius: 8px;
@@ -17137,42 +17173,41 @@ span.swiper-pagination-bullet {
   transition: all 0.3s ease;
 }
 
-.home-apartment__container .home-apartment__box:hover {
+.search-apartment__container .home-apartment__box:hover {
   -o-box-shadow: 0 0 30px 0 rgba(19, 19, 28, 0.12);
   box-shadow: 0 0 30px 0 rgba(19, 19, 28, 0.12);
 }
 
-.home-apartment__container .home-apartment__box:hover .thumb_container {
-  transform: scale(1.07);
+.search-apartment__container .home-apartment__box:hover .img-whp {
   transition: all 0.5s ease;
-}
-
-.home-apartment__container .home-apartment__box:hover .thumb_container .img-whp {
+  width: 108%;
+  height: auto;
   opacity: 1;
 }
 
-.home-apartment__container .thumb {
+.search-apartment__container .thumb {
   background-color: #000000;
   border-radius: 8px;
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
   display: flex;
-  overflow: hidden;
+  overflow: visible;
   margin: 10px 10px 0;
   position: relative;
 }
 
-.home-apartment__container .thumb_container {
+.search-apartment__container .thumb_container {
   width: 100%;
   height: 200px;
   position: relative;
   transition: all 0.5s ease;
+  overflow: hidden;
 }
 
-.home-apartment__container .thumb_container .img-whp {
+.search-apartment__container .thumb_container .img-whp {
   opacity: 0.9;
-  width: 100%;
+  width: 101%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -17183,7 +17218,7 @@ span.swiper-pagination-bullet {
   transition: all 0.5s ease;
 }
 
-.home-apartment__container .thmb_cntnt {
+.search-apartment__container .thmb_cntnt {
   bottom: 0;
   left: 10px;
   position: absolute;
@@ -17191,13 +17226,13 @@ span.swiper-pagination-bullet {
   top: 10px;
 }
 
-.home-apartment__container ul.tag {
+.search-apartment__container ul.tag {
   position: absolute;
   left: 12px;
   top: 10px;
 }
 
-.home-apartment__container ul.tag li {
+.search-apartment__container ul.tag li {
   border-radius: 3px;
   padding: 5px 10px;
   background-color: #d34262;
@@ -17205,13 +17240,13 @@ span.swiper-pagination-bullet {
   font-size: 14px;
 }
 
-.home-apartment__container .tag-gallery {
+.search-apartment__container .tag-gallery {
   position: absolute;
   left: 12px;
   top: 10px;
 }
 
-.home-apartment__container .tag-gallery form .gallery-btn {
+.search-apartment__container .tag-gallery form .gallery-btn {
   border-radius: 3px;
   padding: 5px 10px;
   border: 1px solid #d34262;
@@ -17220,7 +17255,7 @@ span.swiper-pagination-bullet {
   font-size: 14px;
 }
 
-.home-apartment__container .fp_price {
+.search-apartment__container .fp_price {
   bottom: 15px;
   font-size: 22px;
   font-family: "Nunito";
@@ -17231,23 +17266,23 @@ span.swiper-pagination-bullet {
   position: absolute;
 }
 
-.home-apartment__container .fp_price small {
+.search-apartment__container .fp_price small {
   font-size: 14px;
 }
 
-.home-apartment__container .details {
+.search-apartment__container .details {
   position: relative;
 }
 
-.home-apartment__container .details .tc_content .tc_content__height {
+.search-apartment__container .details .tc_content .tc_content__height {
   height: 50px;
 }
 
-.home-apartment__container .details .tc_content .tc_content__height a {
+.search-apartment__container .details .tc_content .tc_content__height a {
   text-decoration: none;
 }
 
-.home-apartment__container .details .tc_content .tc_content__height a h4 {
+.search-apartment__container .details .tc_content .tc_content__height a h4 {
   margin-top: 20px;
   font-size: 18px;
   color: #484848;
@@ -17256,20 +17291,20 @@ span.swiper-pagination-bullet {
   padding-left: 20px;
 }
 
-.home-apartment__container .details .tc_content p {
+.search-apartment__container .details .tc_content p {
   padding-left: 20px;
   font-size: 14px;
   color: #484848;
   line-height: 1.2;
 }
 
-.home-apartment__container .details .prop_details {
+.search-apartment__container .details .prop_details {
   margin-bottom: 0;
   display: flex;
   padding-left: 20px;
 }
 
-.home-apartment__container .details .prop_details li {
+.search-apartment__container .details .prop_details li {
   margin-right: 30px;
   font-size: 14px;
   color: #484848;
@@ -17399,7 +17434,7 @@ span.swiper-pagination-bullet {
     display: -ms-flex;
     display: -o-flex;
     display: flex;
-    overflow: hidden;
+    overflow: visible;
     margin: 10px 10px 0;
     position: relative;
   }
@@ -17576,7 +17611,7 @@ span.swiper-pagination-bullet {
   }
 
   .home-apartment__container {
-    width: 100%;
+    width: 100% !important;
   }
 
   .home-apartment__wrapper {
@@ -17809,7 +17844,7 @@ span.swiper-pagination-bullet {
   display: -ms-flex;
   display: -o-flex;
   display: flex;
-  overflow: hidden;
+  overflow: visible;
   margin: 10px 10px 0;
   position: relative;
 }

@@ -17,5 +17,9 @@ class View extends Model
         return $this->belongsTo('App\Apartment');
     }
 
-    protected $hidden = ['ip', 'updated_at', 'apartment_id'];
+    protected $hidden = [
+      'ip',
+      'updated_at',
+      'apartment_id'
+    ];
 }

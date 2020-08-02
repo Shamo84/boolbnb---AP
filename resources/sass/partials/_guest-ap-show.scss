@@ -78,16 +78,21 @@
             width: 100%;
             border-radius: 8px;
 
-            .swiper-wrapper {
-                .swiper-slide {}
-
-                .cropped {
-                    height: 400px;
-                    object-fit: cover;
-                }
-            }
         }
     }
+}
+.swiper-wrapper {
+  display: flex;
+  overflow-x: scroll;
+  .swiper-slide {}
+
+  .cropped {
+    height: 400px;
+    object-fit: cover;
+  }
+    &::-webkit-scrollbar {
+      height: 30px;
+  }
 }
 
 .ap-show__content {

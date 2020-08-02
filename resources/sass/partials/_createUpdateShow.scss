@@ -27,6 +27,8 @@
             border-radius: 8px;
 
             .swiper-wrapper {
+              display: flex;
+              overflow-x: scroll;
                 .cropped {
                     height: 400px;
                     object-fit: cover;

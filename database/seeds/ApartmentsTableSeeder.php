@@ -200,10 +200,7 @@ class ApartmentsTableSeeder extends Seeder
 				$images26->img_path = '026.jpg';
 				$images26->save();
 			}
-			$services = Service::all();
-			for ($x = 0; $x < rand(0, 11); $x++) {
-				unset($services[rand(1, count($services))]);
-			}
+			$services = Service::inRandomOrder()->take(rand(0, 11))->get();
 			$apartment->services()->attach($services);
 		}
 	}

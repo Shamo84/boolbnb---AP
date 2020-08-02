@@ -2,15 +2,15 @@
 
 <body>
     <header>
-        @include("layouts.partials.header")
+      @include("layouts.partials.header")
     </header>
     <main>
-        @yield('content')
+      @yield('content')
     </main>
     <footer>
-        @include("layouts.partials.footer")
+      @include("layouts.partials.footer")
     </footer>
-    @yield('script')
+      @yield('script')
 </body>
 
 </html>

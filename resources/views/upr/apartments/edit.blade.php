@@ -159,7 +159,7 @@
   						<div class="box">
   							<label class="title" for="active">Visibilità</label>
                 <select name="active" class="custom-select mr-sm-2">
-                    <option value="0" {{($apartment->active == 0) ? 'selected' : ''}}  >Non visibile</option>
+                    <option value="0" {{($apartment->active == 0) ? 'selected' : ''}} >Non visibile</option>
                     <option value="1" {{($apartment->active == 1) ? 'selected' : ''}} >Visibile</option>
                 </select>
   						</div>

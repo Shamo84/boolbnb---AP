@@ -69,7 +69,7 @@
 						</div>
 
 					<div class="box">
-							<label class="title"  for="description">Scegli la foto copertina</label>
+							<label class="title"  for="cover_img">Scegli la foto copertina</label>
 							<div class="form-group col-md-12 custom-file mb-3">
 									<input type="file" class="custom-file-input" id="validatedCustomFile" name="cover_img" accept="image/*">
 									<label class="custom-file-label" for="validatedCustomFile"></label>

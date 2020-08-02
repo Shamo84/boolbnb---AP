@@ -15,18 +15,13 @@ class CreateApartmentPackageTable extends Migration
 	{
 		Schema::create('apartment_package', function (Blueprint $table) {
 			$table->id();
-
-			$table->unsignedBigInteger('apartment_id');
-			$table->foreign('apartment_id')
-				->references('id')
-				->on('apartments')
+			$table->foreignId('apartment_id')
+				->constrained()
 				->onUpdate('CASCADE')
 				->onDelete('CASCADE');
 
-			$table->unsignedBigInteger('package_id');
-			$table->foreign('package_id')
-				->references('id')
-				->on('packages')
+			$table->foreignId('package_id')
+				->constrained()
 				->onUpdate('CASCADE')
 				->onDelete('CASCADE');
 
